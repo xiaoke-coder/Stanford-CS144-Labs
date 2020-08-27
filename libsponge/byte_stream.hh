@@ -16,7 +16,13 @@
 class ByteStream {
   private:
     // Your code here -- add private members as necessary.
-
+    size_t _capacity;
+    size_t _used;
+    std::string _data;
+    bool _input_ended;
+    size_t _byte_written;
+    size_t _byte_read;
+    bool _eof;
     bool _error{};  //!< Flag indicating that the stream suffered an error.
 
   public:
